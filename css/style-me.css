@@ -84,51 +84,56 @@
 
 /*  Es 10 */
 .ex-10-icon {
-    overflow: hidden;
-    transition-duration: 1s;
-    transition-property: transform;
+    font-size: 60px;
+    animation: spin 1s linear infinite;
 }
-.ex-10-icon:hover {
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
+@keyframes spin {
+    0% {
+        transform: rotate(1turn);
+    }
 }
 
 /*  Es 11 */
 .ex-11-icon {
-    overflow: hidden;
-    transition-duration: 0.6s;
-    transition-property: transform;
+    font-size: 60px;
 }
+
 .ex-11-icon:hover {
-    transition-duration: 2s;
-    transform: rotate(360deg);
-    -webkit-transform: rotate(270deg);
+    animation: spin2 2s linear;
+}
+
+@keyframes spin2 {
+    0% {
+        transform: rotate(0);
+    }
+    90% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
 }
 
 /*  Es 12 */
 
-.ex-12-button:hover .ex-12-bottom-white {
-    animation: sposta 5s linear;
+.ex-12-button:hover .ex-12-top-white {
+    animation: moveTopWhite 2s linear;
 }
-@keyframes sposta {
+@keyframes moveTopWhite {
     0% {
-        right: 20%;
+        left: 10%;
     }
-    
     50% {
-        right: 50%;
-
+        left: calc(100% - 60px);
     }
-    
     100% {
-        left: 20%;
+        left: 10%;
     }
 }
-
-.ex-13-button:hover .ex-13-top-white {
-    animation: giro-alto 2s linear;
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: moveBottomWhite 2s linear;
 }
-@keyframes giro-alto {
+@keyframes moveBottomWhite {
     0% {
         right: 20%;
     }
@@ -140,6 +145,7 @@
     }
 }
 
+/*   Es 13   */
 .ex-13-button:hover .ex-13-top-white {
     animation: giro-intero-top 4s linear;
      
